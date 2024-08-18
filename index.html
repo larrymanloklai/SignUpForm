@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odin Sign-Up Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <!--google fonts link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-section">
+            <div class="transparant">
+                <div class="logo">
+                    <img src="odin-lined.png" alt="Odin Logo">
+                    
+                </div>
+                Odin, war & death
+            </div>
+        </div>
+        <div class="right-section">
+            <h1>This is not a real online service!</h1>
+            <p>You know you need something like this in your life to help you realize your deepest dreams. Sign up
+                <strong>now</strong> to get started.</p>
+            <p><strong>You know</strong> you want to.</p>
+
+            <form id="signup-form" action="/submit-form" method="post">
+                <h2>Let's do this!</h2>
+                <div class="input-group">
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" name="first-name" required>
+                </div>
+                <div class="input-group">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" name="last-name" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="phone-number">Phone Number</label>
+                    <input type="text" id="phone-number" name="phone-number">
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" class="password" required>
+                </div>
+                <div class="input-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" class="password" required>
+                </div>
+                <div class="error-message">
+                    <p>* Passwords do not match</p>
+                </div>
+                <button type="submit">Create Account</button>
+            </form>
+
+            <p>Already have an account? <a href="#">Log in</a></p>
+        </div>
+    </div>
+
+    <script src="javascript.js"></script>
+</body>
+
+</html>
