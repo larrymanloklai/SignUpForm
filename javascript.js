@@ -1,4 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Theme toggle
+    const themeStylesheet = document.getElementById('theme-stylesheet');
+    const themeToggle = document.getElementById('theme-toggle');
+
+    function applyTheme(theme) {
+        if (theme === 'dark') {
+            themeStylesheet.href = 'styles2.css';
+            themeToggle.textContent = '☀️ Light';
+        } else {
+            themeStylesheet.href = 'styles.css';
+            themeToggle.textContent = '🌙 Dark';
+        }
+    }
+
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    applyTheme(savedTheme);
+
+    themeToggle.addEventListener('click', () => {
+        const next = localStorage.getItem('theme') === 'dark' ? 'light' : 'dark';
+        localStorage.setItem('theme', next);
+        applyTheme(next);
+    });
+
     const form = document.getElementById('signup-form');
     const passwordInput = document.getElementById('password');
     const confirmPasswordInput = document.getElementById('confirm-password');
